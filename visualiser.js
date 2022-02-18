@@ -4,7 +4,6 @@ const main = () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-
     class Bar {
         constructor(x, y, width, height, color) {
             this.x = x;
@@ -24,12 +23,11 @@ const main = () => {
         }
     }
 
-    const bar1 = new Bar(10, 10, 100, 200, 'blue');
+    const microphone = new Microphone();
+    console.log(microphone)
 
     const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height)
-        bar1.update()
-        bar1.draw(ctx)
         // generate audio samples from mic
         // animate bars based on mic data
         requestAnimationFrame(animate);
